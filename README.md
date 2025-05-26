@@ -29,7 +29,7 @@ A lightweight Ubuntu 20.04 virtual machine running in a Docker container using Q
 
 ```bash
 # Clone the repository
-git clone https://github.com/hopingboyz/ubuntu22.04
+git clone https://github.com/gamernestt/ubuntu22.04
 cd ubuntu22.04
 
 # Build the Docker image
@@ -37,4 +37,4 @@ docker build -t ubuntu-vm .
 
 # Run the container
 
-docker run --privileged -p 6080:6080 -p 2221:2222 -v $PWD/vmdata:/data ubuntu-vm
+docker run --privileged --cpus=6 --memory=8g -p 6080:6080 -p 2221:2222 -v $PWD/vmdata:/data ubuntu-vm
