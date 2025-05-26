@@ -78,8 +78,8 @@ fi
 qemu-system-x86_64 \
     -enable-kvm \
     -cpu host \
-    -smp 16 \
-    -m 65536 \
+    -smp 6 \
+    -m 8192 \
     -drive file="$DISK",format=raw,if=virtio \
     -drive file="$SEED",format=raw,if=virtio \
     -netdev user,id=net0,hostfwd=tcp::2222-:22 \
@@ -95,6 +95,10 @@ echo "================================================"
 echo " 🖥️  VNC: http://localhost:6080/vnc.html"
 echo " 🔐 SSH: ssh root@localhost -p 2222"
 echo " 🧾 Login: root / root"
+echo "================================================"
+echo " VM Resources:"
+echo " - CPU Cores: 6"
+echo " - RAM: 8GB"
 echo "================================================"
 
 # Wait for SSH port to be ready
