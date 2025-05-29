@@ -78,8 +78,8 @@ fi
 qemu-system-x86_64 \
     -enable-kvm \
     -cpu host \
-    -smp 6 \
-    -m 8192 \
+    -smp 12 \
+    -m 24576 \
     -drive file="$DISK",format=raw,if=virtio \
     -drive file="$SEED",format=raw,if=virtio \
     -netdev user,id=net0,hostfwd=tcp::2222-:22 \
@@ -97,8 +97,8 @@ echo " 🔐 SSH: ssh root@localhost -p 2222"
 echo " 🧾 Login: root / root"
 echo "================================================"
 echo " VM Resources:"
-echo " - CPU Cores: 6"
-echo " - RAM: 8GB"
+echo " - CPU Cores: 12"
+echo " - RAM: 24GB"
 echo "================================================"
 
 # Wait for SSH port to be ready
