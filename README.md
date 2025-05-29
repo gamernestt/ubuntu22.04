@@ -37,4 +37,4 @@ docker build -t ubuntu-vm .
 
 # Run the container
 
-docker run --privileged --cpus=6 --memory=8g -p 6080:6080 -p 2221:2222 -v $PWD/vmdata:/data ubuntu-vm
+docker run --privileged --cpus=12 --memory=24g -p 6080:6080 -p 2221:2222 -v $PWD/vmdata:/data ubuntu-vm
